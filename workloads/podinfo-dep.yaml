@@ -18,7 +18,3 @@ spec:
                 key: user
       restartPolicy: Never
   backoffLimit: 4
-  volumes:
-  - name: basic
-    secret:
-      secretName: tfcloud_token
