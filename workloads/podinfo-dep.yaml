@@ -2,14 +2,15 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: sec4
+  name: sec5
 spec:
   template:
     spec:
       containers:
-      - name: sec4
+      - name: sec5
         image: perl
-        command: ["echo", "$TFCLOUD_USERNAME"]
+        command: ["echo"]
+        args: ["wow: $(TFCLOUD_USERNAME)"]
         env:
           - name: TFCLOUD_USERNAME
             valueFrom:
