@@ -10,7 +10,7 @@ spec:
       - name: sec6
         image: perl
         command: ["echo"]
-        args: ["wow: $TFCLOUD_USERNAME"]
+        args: ["wow2: $TFCLOUD_USERNAME"]
         env:
           - name: TFCLOUD_USERNAME
             valueFrom:
