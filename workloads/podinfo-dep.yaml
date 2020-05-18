@@ -8,8 +8,8 @@ spec:
     spec:
       containers:
       - name: sec2
-        image: perl
-        command: ["echo",  "tfcloud2: $TFCLOUD_USERNAME"]
+        image: nginx
+        # command: ["echo",  "tfcloud2: $TFCLOUD_USERNAME"]
         env:
           - name: TFCLOUD_USERNAME
             valueFrom:
