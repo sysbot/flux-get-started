@@ -9,7 +9,7 @@ spec:
       containers:
       - name: sec2
         image: perl
-        command: ["echo",  "tfcloud2: $TFCLOUD_USERNAME"]
+        command: ["env"]
         env:
           - name: TFCLOUD_USERNAME
             valueFrom:
