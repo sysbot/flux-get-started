@@ -6,7 +6,6 @@ metadata:
 spec:
   template:
     spec:
-      ttlSecondsAfterFinished: 100
       containers:
       - name: sec6
         image: perl
