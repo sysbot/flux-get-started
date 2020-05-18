@@ -2,12 +2,12 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: sec6
+  name: sec7
 spec:
   template:
     spec:
       containers:
-      - name: sec6
+      - name: sec7
         image: perl
         command: ["echo"]
         args: ["wow2: $TFCLOUD_USERNAME"]
