@@ -2,12 +2,12 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: sec2
+  name: sec3
 spec:
   template:
     spec:
       containers:
-      - name: sec2
+      - name: sec3
         image: perl
         command: ["env"]
         env:
