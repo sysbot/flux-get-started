@@ -2,14 +2,14 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: sec3
+  name: sec4
 spec:
   template:
     spec:
       containers:
-      - name: sec3
+      - name: sec4
         image: perl
-        command: ["env"]
+        command: ["echo", "$TFCLOUD_USERNAME"]
         env:
           - name: TFCLOUD_USERNAME
             valueFrom:
