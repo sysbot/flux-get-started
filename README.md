@@ -12,6 +12,27 @@ here](https://github.com/fluxcd/flux/blob/master/docs/tutorials/get-started-helm
 * init container automated image updates (regular expression filter)
 * container automated image updates (semantic versioning filter)
 
+## Debug/Deploy
+
+```
+kubectl describe pod sec-w895l
+
+# get pod info, note the labels
+kubectl describe pods -n kube-system sealed-secrets-controller-b96fd46cd-72z8n
+
+# fetch a certain
+kubeseal --fetch-cert --controller-name=sealed-secrets-controller > pub-cert.pem
+
+# generate a new secret
+kubectl -n dev create secret generic basic-auth \
+--from-literal=user=admin \
+--from-literal=password=admin \
+--dry-run \
+-o json > basic-auth.json
+kubeseal --format=yaml --cert=pub-cert.pem < basic-auth.json > basic-auth.yaml
+
+```
+
 ## Helm Releases
 
 Mongodb
@@ -21,7 +42,7 @@ Mongodb
 
 Redis
 * Source: Helm repository (stable)
-* Kubernetes stateful set 
+* Kubernetes stateful set
 * locked automated image updates (semantic versioning filter)
 
 Ghost
