@@ -1,3 +1,4 @@
+# will trigger a deploy?
 
 fetch_cert:
 	kubeseal --fetch-cert --controller-namespace=kube-system --controller-name=sealed-secrets-controller > pub-cert.pem
