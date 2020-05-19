@@ -8,7 +8,9 @@ spec:
     spec:
       containers:
       - name: sec7
-        image: perl
+        image:
+          repository: perl
+          tag: 1.0.0
         command: ["echo"]
         args: ["wow2: $TFCLOUD_USERNAME"]
         env:
