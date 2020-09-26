@@ -5,6 +5,8 @@
 We published a step-by-step run-through on how to use Flux and Helm Operator [over
 here](https://github.com/fluxcd/flux/blob/master/docs/tutorials/get-started-helm.md).
 
+Making some changes
+
 ## Workloads
 
 [podinfo](https://github.com/stefanprodan/podinfo)
