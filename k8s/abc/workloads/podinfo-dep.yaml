@@ -2,7 +2,8 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  generateName: abc-
+  generateName: abc-bc
+  namespace: argocd
 spec:
   template:
     spec:
